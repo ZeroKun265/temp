@@ -1,0 +1,211 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Container Styling */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#output p {
+  margin: 10px 0;
+}
+
+@font-face {
+  font-family: 'dragon_alphabet';
+  src: url('dragon_alphabet.ttf') format('truetype');
+}
+
+.dragon_alphabet {
+  font-family: 'dragon_alphabet', sans-serif;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+    /* Hide all elements */
+  }
+
+  #printable,
+  #printable * {
+    visibility: visible;
+    /* Make only the printable section visible */
+    display: block;
+    /* Ensure content is displayed as a block (or appropriate layout) */
+    position: static;
+    /* Prevent it from being positioned at the top-left */
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Textarea Styling */
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 15px;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  background-color: #007BFF;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #00408d;
+}
+
+/* Output Container Styling */
+.output-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+#exportPdfButton {
+  display: none;
+}
+
+/* Print Styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #printable,
+  #printable * {
+    visibility: visible;
+    display: block;
+    position: static;
+  }
+
+  /* Customize print page size and margins */
+  @page {
+    size: auto;
+    margin: 20mm;
+  }
+}
+
+/* Dragon Alphabet Font */
+@font-face {
+  font-family: 'dragon_alphabet';
+  src: url('dragon_alphabet.ttf') format('truetype');
+}
+
+.dragon_alphabet {
+  font-family: 'dragon_alphabet', sans-serif;
+}
+
+/* Callout Styles for "Careful" Disclaimer */
+.callout {
+  background-color: #fef2cc;
+  /* Light yellow background */
+  border-left: 5px solid #f39c12;
+  /* Yellow border for the left side */
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.callout.warning {
+  background-color: #fef2cc;
+  border-left: 5px solid #f39c12;
+}
+
+.callout-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #f39c12;
+  margin-right: 10px;
+}
+
+.callout-body {
+  color: #333;
+  font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  textarea {
+    height: 120px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

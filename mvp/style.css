@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#output p {
+  margin: 10px 0;
+}
+
+@font-face {
+  font-family: 'dragon_alphabet';
+  src: url('dragon_alphabet.ttf') format('truetype');
+}
+
+.dragon_alphabet {
+  font-family: 'dragon_alphabet', sans-serif;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+    /* Hide all elements */
+  }
+
+  #printable,
+  #printable * {
+    visibility: visible;
+    /* Make only the printable section visible */
+    display: block;
+    /* Ensure content is displayed as a block (or appropriate layout) */
+    position: static;
+    /* Prevent it from being positioned at the top-left */
+  }
+}
